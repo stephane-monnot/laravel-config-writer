@@ -178,7 +178,7 @@ class Rewrite
         $expression[] = '([\'|"]'.$targetKey.'[\'|"]\s*=>\s*)';
 
         // The target value to be replaced ($3)
-        $expression[] = '([tT][rR][uU][eE]|[fF][aA][lL][sS][eE]|[nN][uU][lL]{2}|[\d]+)';
+        $expression[] = '([tT][rR][uU][eE]|[fF][aA][lL][sS][eE]|[nN][uU][lL]{2}|[\d]+\.[\d]+|[\d]+)';
 
         return '/' . implode('', $expression) . '/';
     }
